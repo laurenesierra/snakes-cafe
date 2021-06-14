@@ -1,114 +1,62 @@
-stars38 = "*" * 38
-print(stars38)
+def greeting():
+  print("""
+  **************************************
+  **    Welcome to the Snakes Cafe!   **
+  **    Please see our menu below.    **
+  **                                  **
+  ** To quit at any time, type "quit" **
+  **************************************
 
-welcomemessage = "**" + "   " + "Weclome to the Snakes Cafe!" + "    " + "**"
-print(welcomemessage)
+  """)
 
-seemenu = "**" + "   " + "Please see our menu below." + "     " + "**"
-print(seemenu)
+greeting()
 
-twostars = "**"
-print(twostars)
+def menu():
+  print("""
+  Appetizers
+  ----------
+  Wings
+  Cookies
+  Spring Rolls
 
-quit = "**" + " " + 'To quit at any time, type "quit"' + " " + "**" 
-print(quit)
+  Entrees
+  -------
+  Salmon
+  Steak
+  Meat Tornado
+  A Literal Garden
 
-stars38 = "*" * 38
-print(stars38)
+  Desserts
+  --------
+  Ice Cream
+  Cake
+  Pie
 
-appetizers = "Appetizers"
-print(appetizers)
+  Drinks
+  ------
+  Coffee
+  Tea
+  Unicorn Tears
+  """)
 
-lineborder = "----------"
-print(lineborder)
+menu()
 
-wings = "Wings"
-print(wings)
+def order_prompt():
+  print("""
+  ***********************************
+  ** What would you like to order? **
+  ***********************************
+  """)
+  
+  food_order = []
+  while True:
+    customer_order = str(input("> ").lower())
+    x_number = len(food_order) + 1
+    if customer_order == "quit":
+      break
+    else:
+      food_order.append(customer_order)
 
-cookies = "Cookies"
-print(cookies)
+      print("** " + str(x_number) + " order of " + str(food_order) + " have been added to your meal **")
 
-springrolls = "Spring Rolls"
-print(springrolls)
-
-print()
-
-entrees = "Entrees"
-print(entrees)
-
-lineborder = "-------"
-print(lineborder)
-
-salmon = "Salmon"
-print(salmon)
-
-steak = "Steak"
-print(steak)
-
-meattornado = "Meat Tornado"
-print(meattornado)
-
-literalgarden = "A Literal Garden"
-print(literalgarden)
-
-print()
-
-desserts = "Desserts"
-print(desserts)
-
-lineborder = "--------"
-print(lineborder)
-
-icecream = "Ice Cream"
-print(icecream)
-
-cake = "Cake"
-print(cake)
-
-pie = "Pie"
-print(pie)
-
-print()
-
-drinks = "Drinks"
-print(drinks)
-
-lineborder = "------"
-print(lineborder)
-
-coffee = "Coffee"
-print(coffee)
-
-tea = "Tea"
-print(tea)
-
-unicorntears = "Unicorn Tears"
-print(unicorntears)
-
-print()
-
-print()
-
-stars38 = "*" * 38
-print(stars38)
-
-orderprompt = "**" + "   " + "What would you like to order?" + "  " + "**"
-print(orderprompt)
-
-stars38 = "*" * 38
-print(stars38)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+order_prompt()
